@@ -1,0 +1,1781 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Tipo 2 em Mulheres | Metodo Exclusivo de Remissao | Doutor DM2</title>
+    <meta name="description" content="Cansaco, tonteiras, dificuldade pra emagrecer? O Metodo DM2 e um protocolo de 12 semanas focado na remissao da diabetes tipo 2. Mais de 50 unidades no Brasil.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --teal: #00A19A;
+            --teal-dark: #008A84;
+            --blue: #1D71B8;
+            --dark-teal: #184341;
+            --dark-forest: #143331;
+            --heading: #184341;
+            --body-text: #7A7A7A;
+            --light-bg: #F7F8FA;
+            --cream: #F8F5F3;
+            --white: #ffffff;
+            --warm-bg: #faf8f6;
+            --warm-accent: #f0ebe6;
+            --gradient-brand: linear-gradient(135deg, #00A19A 0%, #1D71B8 100%);
+            --gradient-hero: linear-gradient(40deg, #00A19A 39%, #1D71B8 100%);
+            --gradient-dark: linear-gradient(137deg, #00A19A 0%, #2D3544D4 77%);
+            --shadow-card: 0px 10px 60px rgba(0,0,0,0.07);
+            --shadow-hover: 0px 20px 60px rgba(0,161,154,0.15);
+            --radius: 8px;
+            --radius-lg: 16px;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--body-text);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background: var(--white);
+        }
+
+        .container {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ===== ANIMACOES ===== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+
+        .reveal-left {
+            opacity: 0;
+            transform: translateX(-60px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal-left.visible { opacity: 1; transform: translateX(0); }
+
+        .reveal-right {
+            opacity: 0;
+            transform: translateX(60px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal-right.visible { opacity: 1; transform: translateX(0); }
+
+        .reveal-scale {
+            opacity: 0;
+            transform: scale(0.9);
+            transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal-scale.visible { opacity: 1; transform: scale(1); }
+
+        .stagger-1 { transition-delay: 0.1s; }
+        .stagger-2 { transition-delay: 0.2s; }
+        .stagger-3 { transition-delay: 0.3s; }
+        .stagger-4 { transition-delay: 0.4s; }
+        .stagger-5 { transition-delay: 0.5s; }
+        .stagger-6 { transition-delay: 0.6s; }
+        .stagger-7 { transition-delay: 0.7s; }
+        .stagger-8 { transition-delay: 0.8s; }
+        .stagger-9 { transition-delay: 0.9s; }
+
+        /* ===== TARJA CIDADE ===== */
+        .city-bar {
+            background: var(--dark-teal);
+            color: var(--white);
+            text-align: center;
+            padding: 12px 20px;
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 0.8px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .city-bar::before {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%;
+            width: 200%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.05), transparent);
+            animation: shimmer 3s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-50%); }
+            100% { transform: translateX(50%); }
+        }
+
+        .city-bar .city-name {
+            color: var(--teal);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        .city-bar .dot {
+            display: inline-block;
+            width: 6px; height: 6px;
+            background: var(--teal);
+            border-radius: 50%;
+            margin: 0 10px;
+            vertical-align: middle;
+            animation: pulse-dot 2s infinite;
+        }
+
+        @keyframes pulse-dot {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+
+        /* ===== HEADER ===== */
+        .header {
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            padding: 14px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            transition: all 0.3s;
+            border-bottom: 1px solid transparent;
+        }
+
+        .header.scrolled {
+            box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+            border-bottom: 1px solid rgba(0,161,154,0.1);
+        }
+
+        .header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-text {
+            font-size: 22px;
+            font-weight: 800;
+            text-decoration: none;
+            background: var(--gradient-brand);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .header-cta {
+            background: var(--blue);
+            color: var(--white);
+            padding: 11px 28px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+
+        .header-cta:hover {
+            background: var(--teal);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 16px rgba(0,161,154,0.3);
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            background: var(--gradient-hero);
+            color: var(--white);
+            padding: 80px 0 100px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -40%; right: -15%;
+            width: 700px; height: 700px;
+            background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: float-circle 8s ease-in-out infinite;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -30%; left: -10%;
+            width: 500px; height: 500px;
+            background: radial-gradient(circle, rgba(29,113,184,0.3) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: float-circle 10s ease-in-out infinite reverse;
+        }
+
+        @keyframes float-circle {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(30px, -20px) scale(1.05); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 720px;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+            color: var(--white);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 28px;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .hero-badge .badge-dot {
+            width: 8px; height: 8px;
+            background: #4ade80;
+            border-radius: 50%;
+            animation: pulse-dot 1.5s infinite;
+        }
+
+        .hero h1 {
+            font-size: 44px;
+            font-weight: 800;
+            line-height: 1.18;
+            margin-bottom: 24px;
+            color: var(--white);
+        }
+
+        .hero h1 .underline-brush {
+            position: relative;
+            white-space: nowrap;
+        }
+
+        .hero h1 .underline-brush::after {
+            content: '';
+            position: absolute;
+            bottom: 2px; left: 0;
+            width: 100%; height: 0.275em;
+            background: rgba(255,255,255,0.25);
+            border-radius: 4px;
+            z-index: -1;
+        }
+
+        .hero-subtitle {
+            font-size: 18px;
+            color: rgba(255,255,255,0.85);
+            line-height: 1.75;
+            margin-bottom: 36px;
+            max-width: 600px;
+            font-weight: 400;
+        }
+
+        .hero-subtitle strong { color: var(--white); font-weight: 700; }
+
+        .cta-group {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--white);
+            color: var(--teal);
+            padding: 16px 36px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 15px;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%;
+            width: 100%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0,161,154,0.1), transparent);
+            transition: left 0.5s;
+        }
+
+        .btn-primary:hover::before { left: 100%; }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+        }
+
+        .btn-primary svg { width: 20px; height: 20px; }
+
+        .btn-ghost {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .btn-ghost:hover { color: var(--white); }
+        .btn-ghost .arrow { transition: transform 0.3s; }
+        .btn-ghost:hover .arrow { transform: translateY(3px); }
+
+        .hero-stats {
+            display: flex;
+            gap: 48px;
+            margin-top: 56px;
+            padding-top: 36px;
+            border-top: 1px solid rgba(255,255,255,0.15);
+        }
+
+        .hero-stat .number {
+            font-size: 36px;
+            font-weight: 900;
+            color: var(--white);
+            line-height: 1;
+        }
+
+        .hero-stat .label {
+            font-size: 12px;
+            color: rgba(255,255,255,0.6);
+            margin-top: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-weight: 500;
+        }
+
+        /* ===== CUIDADORA ===== */
+        .cuidadora {
+            padding: 100px 0;
+            background: var(--warm-bg);
+            position: relative;
+        }
+
+        .cuidadora-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .cuidadora-text h2 {
+            font-size: 32px;
+            font-weight: 800;
+            color: var(--heading);
+            line-height: 1.3;
+            margin-bottom: 24px;
+        }
+
+        .cuidadora-text p {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.85;
+            margin-bottom: 18px;
+        }
+
+        .cuidadora-text p strong { color: var(--heading); }
+
+        .cuidadora-numbers {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .cuidadora-stat {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: 28px 24px;
+            text-align: center;
+            box-shadow: var(--shadow-card);
+            transition: all 0.4s;
+            border: 1px solid transparent;
+        }
+
+        .cuidadora-stat:hover {
+            transform: translateY(-4px);
+            border-color: rgba(0,161,154,0.15);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .cuidadora-stat .stat-number {
+            font-size: 32px;
+            font-weight: 900;
+            background: var(--gradient-brand);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .cuidadora-stat .stat-label {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--body-text);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            line-height: 1.4;
+        }
+
+        /* ===== SINTOMAS ===== */
+        .sintomas {
+            padding: 100px 0;
+            background: var(--white);
+        }
+
+        .section-tag {
+            display: inline-block;
+            background: var(--gradient-brand);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 16px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 56px;
+        }
+
+        .section-header h2 {
+            font-size: 36px;
+            font-weight: 800;
+            line-height: 1.25;
+            color: var(--heading);
+            margin-bottom: 16px;
+        }
+
+        .section-header p {
+            font-size: 17px;
+            color: var(--body-text);
+            max-width: 580px;
+            margin: 0 auto;
+        }
+
+        .checklist-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 14px;
+            max-width: 900px;
+            margin: 0 auto 48px;
+        }
+
+        .check-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            padding: 20px 22px;
+            background: var(--light-bg);
+            border-radius: var(--radius);
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            border: 2px solid transparent;
+            user-select: none;
+        }
+
+        .check-item:hover {
+            border-color: rgba(0,161,154,0.2);
+            background: #f0faf9;
+            transform: translateX(4px);
+        }
+
+        .check-item.checked {
+            background: linear-gradient(135deg, rgba(0,161,154,0.08), rgba(29,113,184,0.06));
+            border-color: var(--teal);
+        }
+
+        .check-icon {
+            flex-shrink: 0;
+            width: 26px; height: 26px;
+            border: 2px solid #ccc;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+            margin-top: 1px;
+        }
+
+        .check-item.checked .check-icon {
+            background: var(--gradient-brand);
+            border-color: var(--teal);
+            animation: check-pop 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        @keyframes check-pop {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.3); }
+            100% { transform: scale(1); }
+        }
+
+        .check-icon svg {
+            width: 14px; height: 14px;
+            color: var(--white);
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+
+        .check-item.checked .check-icon svg { opacity: 1; }
+
+        .check-text {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--heading);
+            line-height: 1.5;
+        }
+
+        .check-text .subtle {
+            color: var(--body-text);
+            font-weight: 400;
+        }
+
+        .sintomas-callout {
+            background: var(--gradient-dark);
+            color: var(--white);
+            padding: 36px 40px;
+            border-radius: var(--radius-lg);
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.5s;
+        }
+
+        .sintomas-callout::before {
+            content: '';
+            position: absolute;
+            top: 0; right: 0;
+            width: 200px; height: 200px;
+            background: radial-gradient(circle, rgba(255,255,255,0.05), transparent);
+            border-radius: 50%;
+        }
+
+        .sintomas-callout p {
+            font-size: 17px;
+            line-height: 1.8;
+            margin-bottom: 8px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .sintomas-callout p:last-of-type { margin-bottom: 0; }
+        .sintomas-callout strong { color: var(--white); font-weight: 700; }
+
+        .counter-display {
+            background: rgba(255,255,255,0.1);
+            border-radius: 50px;
+            padding: 6px 20px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            display: inline-block;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.15);
+        }
+
+        /* ===== PROBLEMA ===== */
+        .problema {
+            padding: 100px 0;
+            background: var(--light-bg);
+        }
+
+        .problema-content {
+            max-width: 780px;
+            margin: 0 auto;
+        }
+
+        .problema-content h2 {
+            font-size: 32px;
+            font-weight: 800;
+            color: var(--heading);
+            line-height: 1.3;
+            margin-bottom: 28px;
+            text-align: center;
+        }
+
+        .problema-cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            margin-bottom: 40px;
+        }
+
+        .prob-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: 28px 24px;
+            box-shadow: var(--shadow-card);
+            transition: all 0.4s;
+            border-left: 4px solid transparent;
+        }
+
+        .prob-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .prob-card:nth-child(1) { border-left-color: #ef4444; }
+        .prob-card:nth-child(2) { border-left-color: #f59e0b; }
+        .prob-card:nth-child(3) { border-left-color: #6366f1; }
+        .prob-card:nth-child(4) { border-left-color: #8b5cf6; }
+
+        .prob-card .prob-emoji { font-size: 28px; margin-bottom: 12px; }
+
+        .prob-card h4 {
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--heading);
+            margin-bottom: 6px;
+        }
+
+        .prob-card p {
+            font-size: 14px;
+            color: var(--body-text);
+            line-height: 1.65;
+        }
+
+        .emphasis-box {
+            background: var(--gradient-brand);
+            color: var(--white);
+            padding: 32px 36px;
+            border-radius: var(--radius-lg);
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 1.5;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .emphasis-box::after {
+            content: '';
+            position: absolute;
+            top: -50%; right: -20%;
+            width: 200px; height: 200px;
+            background: rgba(255,255,255,0.08);
+            border-radius: 50%;
+        }
+
+        /* ===== METODO ===== */
+        .metodo {
+            padding: 100px 0;
+            background: var(--white);
+        }
+
+        .timeline {
+            max-width: 900px;
+            margin: 56px auto 0;
+            position: relative;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 32px; top: 0; bottom: 0;
+            width: 3px;
+            background: linear-gradient(to bottom, var(--teal), var(--blue));
+            border-radius: 3px;
+        }
+
+        .timeline-item {
+            display: flex;
+            gap: 32px;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .timeline-item:last-child { margin-bottom: 0; }
+
+        .timeline-dot {
+            flex-shrink: 0;
+            width: 64px; height: 64px;
+            background: var(--gradient-brand);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            font-weight: 900;
+            color: var(--white);
+            position: relative;
+            z-index: 2;
+            box-shadow: 0 0 0 6px var(--white), 0 4px 20px rgba(0,161,154,0.2);
+            transition: all 0.4s;
+        }
+
+        .timeline-item:hover .timeline-dot {
+            transform: scale(1.1);
+            box-shadow: 0 0 0 8px var(--white), 0 8px 30px rgba(0,161,154,0.3);
+        }
+
+        .timeline-content {
+            background: var(--light-bg);
+            padding: 28px 32px;
+            border-radius: var(--radius-lg);
+            flex: 1;
+            transition: all 0.4s;
+            border: 1px solid transparent;
+        }
+
+        .timeline-item:hover .timeline-content {
+            background: var(--white);
+            box-shadow: var(--shadow-card);
+            border-color: rgba(0,161,154,0.15);
+        }
+
+        .timeline-content h3 {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--heading);
+            margin-bottom: 10px;
+        }
+
+        .timeline-content p {
+            font-size: 15px;
+            color: var(--body-text);
+            line-height: 1.75;
+        }
+
+        .metodo-result {
+            max-width: 900px;
+            margin: 56px auto 0;
+            background: var(--gradient-brand);
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            text-align: center;
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .metodo-result::before {
+            content: '';
+            position: absolute;
+            top: -50%; left: -20%;
+            width: 400px; height: 400px;
+            background: rgba(255,255,255,0.06);
+            border-radius: 50%;
+        }
+
+        .metodo-result p {
+            font-size: 18px;
+            line-height: 1.75;
+            margin-bottom: 28px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .btn-white {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--white);
+            color: var(--teal);
+            padding: 16px 36px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 15px;
+            transition: all 0.3s;
+            position: relative;
+            z-index: 1;
+        }
+
+        .btn-white:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+        }
+
+        .btn-white svg { width: 20px; height: 20px; }
+
+        /* ===== COMPARATIVO ===== */
+        .comparativo {
+            padding: 100px 0;
+            background: var(--dark-teal);
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .comparativo::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.02'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .comparativo .section-header h2 { color: var(--white); }
+        .comparativo .section-tag {
+            background: linear-gradient(135deg, rgba(0,161,154,0.6), rgba(29,113,184,0.6));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .compare-cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .compare-card {
+            border-radius: var(--radius-lg);
+            padding: 36px 32px;
+            transition: all 0.4s;
+        }
+
+        .compare-card.old {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .compare-card.new {
+            background: var(--gradient-brand);
+            border: 1px solid rgba(255,255,255,0.2);
+            box-shadow: 0 8px 40px rgba(0,161,154,0.25);
+        }
+
+        .compare-card.new:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 60px rgba(0,161,154,0.35);
+        }
+
+        .compare-card-title {
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid rgba(255,255,255,0.15);
+        }
+
+        .compare-card.old .compare-card-title { color: rgba(255,255,255,0.4); }
+
+        .compare-row { margin-bottom: 20px; }
+        .compare-row:last-child { margin-bottom: 0; }
+
+        .compare-row .row-label {
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 4px;
+        }
+
+        .compare-card.old .row-label { color: rgba(255,255,255,0.3); }
+        .compare-card.new .row-label { color: rgba(255,255,255,0.7); }
+
+        .compare-row .row-value {
+            font-size: 15px;
+            font-weight: 500;
+            line-height: 1.5;
+        }
+
+        .compare-card.old .row-value { color: rgba(255,255,255,0.55); }
+        .compare-card.new .row-value { color: var(--white); font-weight: 600; }
+
+        /* ===== DEPOIMENTOS ===== */
+        .depoimentos {
+            padding: 100px 0;
+            background: var(--warm-bg);
+        }
+
+        .depoimentos-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .dep-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: 36px 28px 28px;
+            box-shadow: var(--shadow-card);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            border: 1px solid transparent;
+        }
+
+        .dep-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-hover);
+            border-color: rgba(0,161,154,0.15);
+        }
+
+        .dep-quote-icon {
+            width: 40px; height: 40px;
+            background: var(--gradient-brand);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-size: 22px;
+            color: var(--white);
+            font-family: Georgia, serif;
+        }
+
+        .dep-card blockquote {
+            font-size: 15px;
+            color: #555;
+            line-height: 1.85;
+            font-style: italic;
+            margin-bottom: 24px;
+        }
+
+        .dep-divider { height: 1px; background: #eee; margin-bottom: 20px; }
+
+        .dep-author { display: flex; align-items: center; gap: 14px; }
+
+        .dep-avatar {
+            width: 46px; height: 46px;
+            background: var(--gradient-brand);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 15px;
+        }
+
+        .dep-name { font-weight: 700; font-size: 15px; color: var(--heading); }
+        .dep-info { font-size: 13px; color: var(--body-text); }
+
+        /* ===== FAQ ===== */
+        .faq { padding: 100px 0; background: var(--white); }
+
+        .faq-list { max-width: 720px; margin: 0 auto; }
+
+        .faq-item { border-bottom: 1px solid #eee; overflow: hidden; }
+
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            padding: 24px 0;
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--heading);
+            text-align: left;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: 'Montserrat', sans-serif;
+            gap: 16px;
+            transition: color 0.3s;
+        }
+
+        .faq-question:hover { color: var(--teal); }
+
+        .faq-toggle {
+            flex-shrink: 0;
+            width: 32px; height: 32px;
+            border-radius: 50%;
+            background: var(--light-bg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.4s;
+        }
+
+        .faq-toggle svg {
+            width: 14px; height: 14px;
+            color: var(--teal);
+            transition: transform 0.4s;
+        }
+
+        .faq-item.active .faq-toggle {
+            background: var(--gradient-brand);
+        }
+
+        .faq-item.active .faq-toggle svg {
+            color: var(--white);
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .faq-item.active .faq-answer { max-height: 400px; }
+
+        .faq-answer-inner { padding-bottom: 24px; }
+
+        .faq-answer p {
+            font-size: 15px;
+            color: var(--body-text);
+            line-height: 1.85;
+        }
+
+        /* ===== CTA FINAL ===== */
+        .cta-final {
+            padding: 100px 0;
+            background: var(--gradient-hero);
+            color: var(--white);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-final::before {
+            content: '';
+            position: absolute;
+            top: -50%; left: 50%;
+            transform: translateX(-50%);
+            width: 800px; height: 800px;
+            background: radial-gradient(circle, rgba(255,255,255,0.06) 0%, transparent 60%);
+            border-radius: 50%;
+        }
+
+        .cta-final .container { position: relative; z-index: 1; }
+
+        .cta-final h2 {
+            font-size: 36px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+
+        .cta-final p {
+            font-size: 17px;
+            line-height: 1.85;
+            color: rgba(255,255,255,0.85);
+            max-width: 580px;
+            margin: 0 auto 40px;
+        }
+
+        .cta-final-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: var(--white);
+            color: var(--teal);
+            padding: 20px 48px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 17px;
+            transition: all 0.3s;
+        }
+
+        .cta-final-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.2);
+        }
+
+        .cta-final-btn svg { width: 22px; height: 22px; }
+        .cta-micro { margin-top: 16px; font-size: 13px; color: rgba(255,255,255,0.5); }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: var(--dark-forest);
+            color: rgba(255,255,255,0.4);
+            padding: 48px 0 32px;
+            text-align: center;
+        }
+
+        .footer-brand {
+            font-size: 20px;
+            font-weight: 800;
+            background: var(--gradient-brand);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 8px;
+        }
+
+        .footer-tagline { font-size: 14px; font-style: italic; margin-bottom: 28px; color: rgba(255,255,255,0.35); }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 28px;
+            margin-bottom: 28px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a { color: rgba(255,255,255,0.4); text-decoration: none; font-size: 13px; font-weight: 500; transition: color 0.3s; }
+        .footer-links a:hover { color: var(--teal); }
+
+        .footer-copy { font-size: 12px; color: rgba(255,255,255,0.2); }
+
+        /* ===== WPP FLOAT ===== */
+        .wpp-float { position: fixed; bottom: 28px; right: 28px; z-index: 999; text-decoration: none; }
+
+        .wpp-btn {
+            width: 62px; height: 62px;
+            background: #25d366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 24px rgba(37,211,102,0.4);
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .wpp-btn:hover { transform: scale(1.1); box-shadow: 0 6px 30px rgba(37,211,102,0.5); }
+        .wpp-btn svg { width: 30px; height: 30px; color: white; }
+
+        .wpp-pulse {
+            position: absolute;
+            width: 100%; height: 100%;
+            border-radius: 50%;
+            border: 2px solid #25d366;
+            animation: wpp-ring 2s ease-out infinite;
+        }
+
+        @keyframes wpp-ring {
+            0% { transform: scale(1); opacity: 0.6; }
+            100% { transform: scale(1.6); opacity: 0; }
+        }
+
+        .wpp-label {
+            position: absolute;
+            right: 72px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--white);
+            color: var(--heading);
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            white-space: nowrap;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.3s;
+        }
+
+        .wpp-float:hover .wpp-label { opacity: 1; right: 76px; }
+
+        .wpp-label::after {
+            content: '';
+            position: absolute;
+            right: -6px; top: 50%;
+            transform: translateY(-50%);
+            border: 6px solid transparent;
+            border-left-color: var(--white);
+        }
+
+        /* ===== RESPONSIVE — TABLET ===== */
+        @media (max-width: 1024px) {
+            .container { padding: 0 20px; }
+            .hero h1 { font-size: 38px; }
+            .cuidadora-grid { gap: 40px; }
+        }
+
+        /* ===== RESPONSIVE — MOBILE ===== */
+        @media (max-width: 768px) {
+            .container { padding: 0 16px; }
+            .sintomas, .cuidadora, .problema, .metodo, .comparativo, .depoimentos, .faq, .cta-final {
+                padding: 60px 0;
+            }
+
+            .city-bar { font-size: 12px; padding: 10px 16px; }
+            .header { padding: 12px 0; }
+            .logo-text { font-size: 18px; }
+            .header-cta { padding: 9px 18px; font-size: 12px; }
+
+            .hero { padding: 40px 0 56px; }
+            .hero::before { width: 300px; height: 300px; }
+            .hero::after { width: 250px; height: 250px; }
+            .hero-badge { font-size: 10px; padding: 6px 14px; margin-bottom: 20px; }
+            .hero h1 { font-size: 28px; line-height: 1.2; }
+            .hero h1 br { display: none; }
+            .hero-subtitle { font-size: 15px; line-height: 1.7; margin-bottom: 28px; }
+            .cta-group { flex-direction: column; align-items: stretch; gap: 12px; }
+            .btn-primary, .cta-final-btn { width: 100%; justify-content: center; padding: 16px 24px; font-size: 15px; }
+            .btn-ghost { text-align: center; justify-content: center; }
+            .hero-stats { gap: 0; margin-top: 36px; padding-top: 24px; justify-content: space-between; }
+            .hero-stat { text-align: center; flex: 1; }
+            .hero-stat .number { font-size: 26px; }
+            .hero-stat .label { font-size: 10px; letter-spacing: 0; }
+
+            .section-header { margin-bottom: 36px; }
+            .section-header h2 { font-size: 24px; line-height: 1.3; }
+            .section-header h2 br { display: none; }
+            .section-header p { font-size: 15px; }
+            .section-tag { font-size: 11px; letter-spacing: 1.5px; }
+
+            .cuidadora-grid { grid-template-columns: 1fr; gap: 32px; }
+            .cuidadora-text h2 { font-size: 24px; }
+            .cuidadora-text p { font-size: 15px; }
+            .cuidadora-numbers { gap: 12px; }
+            .cuidadora-stat { padding: 22px 18px; }
+            .cuidadora-stat .stat-number { font-size: 26px; }
+            .cuidadora-stat:hover { transform: none; }
+
+            .checklist-grid { grid-template-columns: 1fr; gap: 10px; margin-bottom: 32px; }
+            .check-item { padding: 16px 14px; gap: 12px; }
+            .check-item:hover { transform: none; }
+            .check-text { font-size: 14px; }
+            .check-text .subtle { display: block; margin-top: 2px; font-size: 13px; }
+            .sintomas-callout { padding: 24px 20px; border-radius: 12px; }
+            .sintomas-callout p { font-size: 15px; }
+
+            .problema-content h2 { font-size: 24px; }
+            .problema-cards { grid-template-columns: 1fr; }
+            .prob-card:hover { transform: none; }
+            .emphasis-box { font-size: 17px; padding: 24px 20px; }
+
+            .timeline { margin-top: 36px; }
+            .timeline::before { left: 20px; }
+            .timeline-dot { width: 40px; height: 40px; font-size: 15px; box-shadow: 0 0 0 4px var(--white), 0 4px 16px rgba(0,161,154,0.2); }
+            .timeline-item { gap: 16px; margin-bottom: 24px; }
+            .timeline-item:hover .timeline-dot { transform: none; }
+            .timeline-content { padding: 20px 16px; border-radius: 12px; }
+            .timeline-content h3 { font-size: 16px; }
+            .timeline-content p { font-size: 14px; }
+            .metodo-result { padding: 28px 20px; margin-top: 36px; border-radius: 12px; }
+            .metodo-result p { font-size: 15px; margin-bottom: 20px; }
+            .btn-white { width: 100%; justify-content: center; padding: 14px 24px; font-size: 14px; }
+
+            .compare-cards { grid-template-columns: 1fr; gap: 16px; }
+            .compare-card.new { order: -1; }
+            .compare-card { padding: 28px 22px; border-radius: 12px; }
+
+            .depoimentos-grid { grid-template-columns: 1fr; gap: 16px; }
+            .dep-card { padding: 28px 22px 22px; border-radius: 12px; }
+            .dep-card:hover { transform: none; }
+
+            .faq-question { font-size: 14px; padding: 20px 0; }
+            .faq-toggle { width: 28px; height: 28px; }
+            .faq-answer p { font-size: 14px; }
+
+            .cta-final h2 { font-size: 24px; }
+            .cta-final h2 br { display: none; }
+            .cta-final p { font-size: 15px; margin-bottom: 28px; }
+            .cta-micro { font-size: 12px; }
+
+            .footer { padding: 36px 0 24px; }
+            .footer-links { gap: 16px; }
+            .footer-links a { font-size: 12px; }
+
+            .wpp-float { bottom: 20px; right: 16px; }
+            .wpp-btn { width: 56px; height: 56px; }
+            .wpp-btn svg { width: 26px; height: 26px; }
+            .wpp-label { display: none; }
+        }
+
+        @media (max-width: 400px) {
+            .hero h1 { font-size: 24px; }
+            .hero-subtitle { font-size: 14px; }
+            .hero-stat .number { font-size: 22px; }
+            .section-header h2 { font-size: 22px; }
+            .cuidadora-text h2 { font-size: 22px; }
+            .problema-content h2 { font-size: 22px; }
+            .emphasis-box { font-size: 15px; }
+            .cta-final h2 { font-size: 22px; }
+            .btn-primary, .cta-final-btn { font-size: 14px; padding: 14px 20px; }
+            .city-bar { font-size: 11px; }
+            .cuidadora-numbers { grid-template-columns: 1fr 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- TARJA CIDADE -->
+    <div class="city-bar">
+        <span class="dot"></span>
+        Doutor DM2 <span class="city-name" id="cityName">Vila Velha</span>
+        <span class="dot"></span>
+    </div>
+
+    <!-- HEADER -->
+    <header class="header" id="header">
+        <div class="container">
+            <a href="#" class="logo-text">Doutor DM2</a>
+            <a href="#cta-final" class="header-cta">Quero conhecer o metodo</a>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    Exclusivo para diabetes tipo 2
+                </div>
+                <h1 class="reveal">
+                    Voce cuida de todo mundo.<br>Mas <span class="underline-brush">quem cuida de voce?</span>
+                </h1>
+                <p class="hero-subtitle reveal stagger-1">
+                    Cansaco que nao passa, tonteiras, formigamentos, dificuldade pra emagrecer. Voce nao precisa aceitar isso como "normal". O Metodo DM2 e o primeiro protocolo no Brasil focado na <strong>remissao</strong> da diabetes tipo 2 &mdash; em 12 semanas.
+                </p>
+                <div class="cta-group reveal stagger-2">
+                    <a href="#cta-final" class="btn-primary">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.955 9.955 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18a8 8 0 01-4.243-1.214l-.252-.149-2.868.852.852-2.868-.149-.252A8 8 0 1112 20z"/></svg>
+                        Quero conhecer o metodo
+                    </a>
+                    <a href="#sintomas" class="btn-ghost">
+                        Sera que e pra mim? <span class="arrow">&darr;</span>
+                    </a>
+                </div>
+                <div class="hero-stats reveal stagger-3">
+                    <div class="hero-stat">
+                        <div class="number" data-count="12">0</div>
+                        <div class="label">semanas de protocolo</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="number" data-count="50">0</div>
+                        <div class="label">unidades no Brasil</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="number" data-count="17">0</div>
+                        <div class="label">estados com presenca</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CUIDADORA -->
+    <section class="cuidadora">
+        <div class="container">
+            <div class="cuidadora-grid">
+                <div class="cuidadora-text">
+                    <div class="section-tag reveal-left">A realidade de quem cuida</div>
+                    <h2 class="reveal-left stagger-1">Voce marca consulta pra mae, pro marido, pros filhos. E pra voce?</h2>
+                    <p class="reveal-left stagger-2">Nos nossos dados, <strong>7 em cada 10 leads</strong> que procuram a DM2 sao mulheres. E muitas delas nao buscam pra si &mdash; buscam pra mae, pro esposo, pra irma.</p>
+                    <p class="reveal-left stagger-3">Enquanto isso, seus proprios sintomas vao ficando "pra depois". O cansaco vira rotina. As tonteiras viram "estresse". O peso que nao baixa vira "falta de disciplina".</p>
+                    <p class="reveal-left stagger-4"><strong>Nao e nada disso. E diabetes agindo no seu metabolismo.</strong> E existe um metodo pra reverter isso.</p>
+                </div>
+                <div class="cuidadora-numbers">
+                    <div class="cuidadora-stat reveal-right stagger-1">
+                        <div class="stat-number">70%</div>
+                        <div class="stat-label">dos leads sao mulheres</div>
+                    </div>
+                    <div class="cuidadora-stat reveal-right stagger-2">
+                        <div class="stat-number">72</div>
+                        <div class="stat-label">buscaram consulta pra familia</div>
+                    </div>
+                    <div class="cuidadora-stat reveal-right stagger-3">
+                        <div class="stat-number">51</div>
+                        <div class="stat-label">pre-diabeticas identificadas</div>
+                    </div>
+                    <div class="cuidadora-stat reveal-right stagger-4">
+                        <div class="stat-number">8</div>
+                        <div class="stat-label">com diabetes gestacional</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SINTOMAS -->
+    <section class="sintomas" id="sintomas">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-tag">Voce se identifica?</div>
+                <h2>Marque os sintomas que voce sente.<br>Se forem 3 ou mais, o Metodo DM2 e pra voce.</h2>
+            </div>
+            <div class="checklist-grid">
+                <div class="check-item reveal stagger-1">
+                    <div class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                    <div class="check-text">Cansaco que nao passa <span class="subtle">&mdash; acorda ja exausta, mesmo dormindo</span></div>
+                </div>
+                <div class="check-item reveal stagger-2">
+                    <div class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                    <div class="check-text">Tonteiras e enjoos <span class="subtle">sem explicacao</span></div>
+                </div>
+                <div class="check-item reveal stagger-3">
+                    <div class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                    <div class="check-text">Formigamento ou dormencia <span class="subtle">nas maos e nos pes</span></div>
+                </div>
+                <div class="check-item reveal stagger-4">
+                    <div class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                    <div class="check-text">Dificuldade pra perder peso <span class="subtle">mesmo controlando a alimentacao</span></div>
+                </div>
+                <div class="check-item reveal stagger-5">
+                    <div class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                    <div class="check-text">Vista embacada <span class="subtle">que vai e volta</span></div>
+                </div>
+                <div class="check-item reveal stagger-6">
+                    <div class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                    <div class="check-text">Dores nas pernas <span class="subtle">e inchaco nos pes</span></div>
+                </div>
+                <div class="check-item reveal stagger-7">
+                    <div class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                    <div class="check-text">Ansiedade, sono ruim <span class="subtle">e emocional descontrolado</span></div>
+                </div>
+                <div class="check-item reveal stagger-8">
+                    <div class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                    <div class="check-text">Memoria fraca <span class="subtle">e fraqueza constante</span></div>
+                </div>
+                <div class="check-item reveal stagger-9">
+                    <div class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                    <div class="check-text">Toma Glifage, Metformina ou Insulina <span class="subtle">ha anos &mdash; e nada muda</span></div>
+                </div>
+            </div>
+            <div class="sintomas-callout reveal-scale" id="callout">
+                <div class="counter-display" id="counterDisplay">0 sintomas marcados</div>
+                <p id="calloutText">Esses sintomas <strong>nao sao "estresse"</strong> e nao sao "da idade". Sao sinais de que a diabetes esta afetando seu corpo inteiro &mdash; e que so remedio nao resolve.</p>
+                <p><strong>Chegou a hora de cuidar de voce.</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROBLEMA -->
+    <section class="problema">
+        <div class="container">
+            <div class="problema-content">
+                <div class="section-tag reveal" style="text-align:center;display:block;">O que ninguem te conta</div>
+                <h2 class="reveal stagger-1">Por que remedio sozinho nao resolve &mdash; e por que voce nao esta "exagerando"</h2>
+                <div class="problema-cards">
+                    <div class="prob-card reveal stagger-1">
+                        <div class="prob-emoji">&#128138;</div>
+                        <h4>"Aumenta a dose"</h4>
+                        <p>O medico ajusta o remedio, mas os sintomas continuam. Porque diabetes tipo 2 e uma doenca metabolica &mdash; nao se resolve so com comprimido.</p>
+                    </div>
+                    <div class="prob-card reveal stagger-2">
+                        <div class="prob-emoji">&#9878;&#65039;</div>
+                        <h4>"Voce precisa emagrecer"</h4>
+                        <p>Mas seu metabolismo esta travado pela propria diabetes. E como pedir pra correr com o pe quebrado. Primeiro precisa resolver a causa.</p>
+                    </div>
+                    <div class="prob-card reveal stagger-3">
+                        <div class="prob-emoji">&#128148;</div>
+                        <h4>"E emocional"</h4>
+                        <p>A ansiedade, o sono ruim e o emocional descontrolado podem ter raiz metabolica. Inflamacao cronica afeta o cerebro. Nao e frescura.</p>
+                    </div>
+                    <div class="prob-card reveal stagger-4">
+                        <div class="prob-emoji">&#128260;</div>
+                        <h4>"Esta controlado"</h4>
+                        <p>Voce ouve isso a cada 6 meses. Enquanto isso, os formigamentos pioram, a vista embaça, o cansaco nao sai. Controlar nao e resolver.</p>
+                    </div>
+                </div>
+                <div class="emphasis-box reveal-scale">
+                    Voce nao esta exagerando.<br>Seu corpo esta pedindo ajuda. E existe um metodo pra isso.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- METODO -->
+    <section class="metodo" id="metodo">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-tag">O Metodo</div>
+                <h2>12 semanas pra recuperar<br>a energia que a diabetes tirou de voce</h2>
+                <p>Um protocolo exclusivo que olha pra voce inteira &mdash; nao so pra sua glicose</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item reveal stagger-1">
+                    <div class="timeline-dot">1</div>
+                    <div class="timeline-content">
+                        <h3>Diagnostico completo</h3>
+                        <p>Na primeira consulta, mapeamos todo o seu quadro: glicemia, figado, tireoide, inflamacao, colesterol, pressao. Tudo entra no seu plano personalizado.</p>
+                    </div>
+                </div>
+                <div class="timeline-item reveal stagger-2">
+                    <div class="timeline-dot">2</div>
+                    <div class="timeline-content">
+                        <h3>Protocolo semanal na clinica</h3>
+                        <p>A cada semana, procedimentos de desinflamacao, desintoxicacao, oxigenacao e circulacao. Muitas pacientes relatam melhora no cansaco e nas dores ja nas primeiras sessoes.</p>
+                    </div>
+                </div>
+                <div class="timeline-item reveal stagger-3">
+                    <div class="timeline-dot">3</div>
+                    <div class="timeline-content">
+                        <h3>Suplementacao exclusiva</h3>
+                        <p>Kit com Metforcaps e suplementos desenvolvidos para o Metodo DM2. Voce nao encontra em farmacia. Formulacao propria, pensada pra recuperacao metabolica.</p>
+                    </div>
+                </div>
+                <div class="timeline-item reveal stagger-4">
+                    <div class="timeline-dot">4</div>
+                    <div class="timeline-content">
+                        <h3>Resultados que voce ve nos exames</h3>
+                        <p>Exames no inicio, no meio e no final. Voce acompanha sua evolucao com numeros reais. Hemoglobina glicada, triglicerideos, colesterol &mdash; tudo documentado.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="metodo-result reveal-scale">
+                <p>Em 12 semanas, nossas pacientes relatam: <strong>mais energia, menos dores, sono melhor, reducao de medicamentos, perda de peso</strong> &mdash; e a prova nos exames de que a remissao e possivel.</p>
+                <a href="#cta-final" class="btn-white">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.955 9.955 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18a8 8 0 01-4.243-1.214l-.252-.149-2.868.852.852-2.868-.149-.252A8 8 0 1112 20z"/></svg>
+                    Quero comecar meu protocolo
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMPARATIVO -->
+    <section class="comparativo">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-tag">Comparativo</div>
+                <h2>A diferenca entre "conviver" com diabetes<br>e buscar a remissao</h2>
+            </div>
+            <div class="compare-cards">
+                <div class="compare-card old reveal-left">
+                    <div class="compare-card-title">O que voce vive hoje</div>
+                    <div class="compare-row"><div class="row-label">Objetivo</div><div class="row-value">Controlar a glicose</div></div>
+                    <div class="compare-row"><div class="row-label">Acompanhamento</div><div class="row-value">Consulta a cada 3-6 meses</div></div>
+                    <div class="compare-row"><div class="row-label">Visao</div><div class="row-value">So glicemia e hemoglobina glicada</div></div>
+                    <div class="compare-row"><div class="row-label">Sobre seus sintomas</div><div class="row-value">"E estresse", "E da idade"</div></div>
+                    <div class="compare-row"><div class="row-label">Sobre seu peso</div><div class="row-value">"Voce precisa emagrecer"</div></div>
+                    <div class="compare-row"><div class="row-label">Duracao</div><div class="row-value">Pro resto da vida</div></div>
+                </div>
+                <div class="compare-card new reveal-right">
+                    <div class="compare-card-title">Metodo DM2</div>
+                    <div class="compare-row"><div class="row-label">Objetivo</div><div class="row-value">Buscar a remissao da diabetes</div></div>
+                    <div class="compare-row"><div class="row-label">Acompanhamento</div><div class="row-value">Semanal por 12 semanas</div></div>
+                    <div class="compare-row"><div class="row-label">Visao</div><div class="row-value">Metabolismo completo: figado, tireoide, inflamacao, circulacao</div></div>
+                    <div class="compare-row"><div class="row-label">Sobre seus sintomas</div><div class="row-value">Sao sinais metabolicos que podem ser revertidos</div></div>
+                    <div class="compare-row"><div class="row-label">Sobre seu peso</div><div class="row-value">Primeiro resolvemos a causa, o peso responde</div></div>
+                    <div class="compare-row"><div class="row-label">Duracao</div><div class="row-value">12 semanas com resultado mensuravel</div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DEPOIMENTOS -->
+    <section class="depoimentos">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-tag">Depoimentos</div>
+                <h2>Mulheres que decidiram<br>cuidar de si mesmas</h2>
+            </div>
+            <div class="depoimentos-grid">
+                <div class="dep-card reveal stagger-1">
+                    <div class="dep-quote-icon">&ldquo;</div>
+                    <blockquote>"Estava pedindo socorro, depois de passar por varios medicos. Apos 15 dias, ja me sinto otima. Minhas dores nas pernas e formigamento sumiram. Estou com animo para sair de casa."</blockquote>
+                    <div class="dep-divider"></div>
+                    <div class="dep-author">
+                        <div class="dep-avatar">DE</div>
+                        <div>
+                            <div class="dep-name">Dona Efigenia</div>
+                            <div class="dep-info">Paciente DM2</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dep-card reveal stagger-2">
+                    <div class="dep-quote-icon">&ldquo;</div>
+                    <blockquote>"Eu acordava cansada todo dia, achava que era normal. Na terceira semana do metodo, meu marido perguntou o que tinha mudado. Voltei a ter disposicao pra viver."</blockquote>
+                    <div class="dep-divider"></div>
+                    <div class="dep-author">
+                        <div class="dep-avatar">SH</div>
+                        <div>
+                            <div class="dep-name">Shirley</div>
+                            <div class="dep-info">Paciente DM2 &bull; Vila Velha</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dep-card reveal stagger-3">
+                    <div class="dep-quote-icon">&ldquo;</div>
+                    <blockquote>"Vim buscar pra minha mae, mas quando vi os resultados dela, decidi fazer tambem. Minhas tonteiras sumiram e finalmente estou conseguindo perder peso."</blockquote>
+                    <div class="dep-divider"></div>
+                    <div class="dep-author">
+                        <div class="dep-avatar">LC</div>
+                        <div>
+                            <div class="dep-name">Luciana</div>
+                            <div class="dep-info">Paciente DM2 &bull; Cariacica</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-tag">Duvidas frequentes</div>
+                <h2>Respostas diretas<br>para suas duvidas</h2>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item reveal stagger-1">
+                    <button class="faq-question">Ja tenho plano de saude. Por que eu pagaria por isso?<span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+                    <div class="faq-answer"><div class="faq-answer-inner"><p>Seu plano cobre consultas e exames &mdash; e isso e importante. Mas o Metodo DM2 e um protocolo de 12 semanas com procedimentos clinicos, suplementacao exclusiva e acompanhamento semanal que nenhum plano oferece. E um investimento na sua remissao, nao em mais do mesmo.</p></div></div>
+                </div>
+                <div class="faq-item reveal stagger-2">
+                    <button class="faq-question">Quanto custa o metodo?<span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+                    <div class="faq-answer"><div class="faq-answer-inner"><p>O valor depende do seu quadro e da unidade mais proxima. Na primeira conversa, nossa equipe explica tudo com transparencia. O que nossas pacientes dizem: o custo do metodo e menor do que o custo de viver com a diabetes avancando.</p></div></div>
+                </div>
+                <div class="faq-item reveal stagger-3">
+                    <button class="faq-question">Preciso parar meus medicamentos atuais?<span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+                    <div class="faq-answer"><div class="faq-answer-inner"><p>Nao. O Metodo DM2 trabalha junto com seu acompanhamento medico atual. A reducao de medicamentos acontece naturalmente, com base nos seus exames, e sempre com orientacao profissional.</p></div></div>
+                </div>
+                <div class="faq-item reveal stagger-4">
+                    <button class="faq-question">Tive diabetes gestacional. O metodo e pra mim?<span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+                    <div class="faq-answer"><div class="faq-answer-inner"><p>Sim. Mulheres que tiveram diabetes gestacional tem risco ate 7x maior de desenvolver diabetes tipo 2. O Metodo DM2 pode ajudar a reverter esse quadro antes que se instale de vez.</p></div></div>
+                </div>
+                <div class="faq-item reveal stagger-5">
+                    <button class="faq-question">Tenho hipotireoidismo e fibromialgia. Posso fazer?<span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+                    <div class="faq-answer"><div class="faq-answer-inner"><p>O Metodo DM2 olha pro seu metabolismo inteiro. Muitas dessas condicoes compartilham a mesma raiz inflamatoria da diabetes. Na consulta inicial, avaliamos seu quadro completo e ajustamos o protocolo pra voce.</p></div></div>
+                </div>
+                <div class="faq-item reveal stagger-6">
+                    <button class="faq-question">Posso fazer pra mim e pra minha mae/esposo?<span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+                    <div class="faq-answer"><div class="faq-answer-inner"><p>Claro! Muitas familias fazem o metodo juntas. Cada pessoa recebe um protocolo personalizado. Fale com a gente no WhatsApp e a equipe orienta como funciona pra mais de uma pessoa.</p></div></div>
+                </div>
+                <div class="faq-item reveal stagger-7">
+                    <button class="faq-question">Tem unidade na minha cidade?<span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+                    <div class="faq-answer"><div class="faq-answer-inner"><p>Estamos com mais de 50 unidades em 17 estados. Fale com a gente no WhatsApp e encontramos a unidade mais perto de voce.</p></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="cta-final" id="cta-final">
+        <div class="container">
+            <h2 class="reveal">Voce ja cuidou de todo mundo.<br>Agora e a sua vez.</h2>
+            <p class="reveal stagger-1">O cansaco, as dores, o peso, o emocional &mdash; nao e frescura e nao e "da idade". E diabetes agindo no seu corpo. E em 12 semanas, voce pode ver nos seus proprios exames que a <strong>remissao e possivel</strong>.</p>
+            <a href="https://wa.me/5527996506219?text=Ol%C3%A1%2C%20quero%20conhecer%20o%20M%C3%A9todo%20DM2" class="cta-final-btn reveal stagger-2" target="_blank">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.955 9.955 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18a8 8 0 01-4.243-1.214l-.252-.149-2.868.852.852-2.868-.149-.252A8 8 0 1112 20z"/></svg>
+                Quero falar com uma especialista DM2
+            </a>
+            <div class="cta-micro reveal stagger-3">Atendimento humano, sem robo. Nossa equipe vai te responder em breve.</div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-brand">Doutor DM2</div>
+            <div class="footer-tagline">Metodo inteligente e exclusivo que te enxerga por inteira.</div>
+            <div class="footer-links">
+                <a href="https://doutordm2.com.br/unidades/">Unidades</a>
+                <a href="https://doutordm2.com.br/sobre/">Sobre</a>
+                <a href="https://doutordm2.com.br/blog/">Blog</a>
+                <a href="https://doutordm2.com.br/contato/">Contato</a>
+                <a href="https://doutordm2.com.br/politica-de-privacidade/">Privacidade</a>
+            </div>
+            <div class="footer-copy">&copy; 2026 Doutor DM2 Diabetes. Todos os direitos reservados.</div>
+        </div>
+    </footer>
+
+    <!-- WPP FLUTUANTE -->
+    <a href="https://wa.me/5527996506219?text=Ol%C3%A1%2C%20quero%20conhecer%20o%20M%C3%A9todo%20DM2" class="wpp-float" target="_blank">
+        <div class="wpp-btn">
+            <span class="wpp-pulse"></span>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.955 9.955 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18a8 8 0 01-4.243-1.214l-.252-.149-2.868.852.852-2.868-.149-.252A8 8 0 1112 20z"/></svg>
+        </div>
+        <span class="wpp-label">Fale com a gente</span>
+    </a>
+
+    <!-- JAVASCRIPT -->
+    <script>
+    (function() {
+        // Scroll Reveal
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+        }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+        document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale').forEach(el => observer.observe(el));
+
+        // Header scroll
+        window.addEventListener('scroll', () => {
+            document.getElementById('header').classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // Counter animado
+        let counterDone = false;
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !counterDone) {
+                    counterDone = true;
+                    document.querySelectorAll('[data-count]').forEach(counter => {
+                        const target = parseInt(counter.dataset.count);
+                        let current = 0;
+                        const step = Math.ceil(target / 30);
+                        const timer = setInterval(() => {
+                            current += step;
+                            if (current >= target) { current = target; clearInterval(timer); }
+                            counter.textContent = current;
+                        }, 40);
+                    });
+                }
+            });
+        }, { threshold: 0.5 });
+        document.querySelectorAll('[data-count]').forEach(c => counterObserver.observe(c));
+
+        // Checklist
+        const callout = document.getElementById('callout');
+        document.querySelectorAll('.check-item').forEach(item => {
+            item.addEventListener('click', () => {
+                item.classList.toggle('checked');
+                const count = document.querySelectorAll('.check-item.checked').length;
+                document.getElementById('counterDisplay').style.display = 'inline-block';
+                document.getElementById('counterDisplay').textContent = count + (count === 1 ? ' sintoma marcado' : ' sintomas marcados');
+
+                if (count >= 3) {
+                    callout.style.background = 'linear-gradient(135deg, #00A19A 0%, #1D71B8 100%)';
+                    callout.innerHTML = '<div class="counter-display" style="display:inline-block">' + count + ' sintomas marcados</div>' +
+                        '<p style="font-size:20px;font-weight:700;margin-bottom:20px">Voce marcou ' + count + ' sintomas.<br>O Metodo DM2 foi desenvolvido pra voce.</p>' +
+                        '<a href="#cta-final" class="btn-white" style="text-decoration:none">' +
+                        '<svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.955 9.955 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18a8 8 0 01-4.243-1.214l-.252-.149-2.868.852.852-2.868-.149-.252A8 8 0 1112 20z"/></svg>' +
+                        ' Quero falar com uma especialista</a>';
+                }
+            });
+        });
+
+        // FAQ
+        document.querySelectorAll('.faq-question').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const item = btn.parentElement;
+                const isActive = item.classList.contains('active');
+                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+                if (!isActive) item.classList.add('active');
+            });
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offset = document.querySelector('.header').offsetHeight + 20;
+                    window.scrollTo({ top: target.getBoundingClientRect().top + window.pageYOffset - offset, behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Cidade via URL
+        const city = new URLSearchParams(window.location.search).get('cidade');
+        if (city) document.getElementById('cityName').textContent = decodeURIComponent(city);
+    })();
+    </script>
+
+</body>
+</html>
